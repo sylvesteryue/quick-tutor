@@ -1,0 +1,23 @@
+.SubmitButton {
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    color: blue;
+}
+
+.SubmitButton:hover, .SubmitButton:active {
+    background-color: #A0DB41;
+    border: 1px solid aqua;
+    color: yellow;
+}
+
+.SubmitButton:disabled {
+    background-color: #C7C6C6;
+    cursor: not-allowed;
+    border: 1px solid #ccc;
+    color: #888888;
+}
+
+.SubmitButton:not(:disabled) {
+    animation: enable 0.3s linear;
+}

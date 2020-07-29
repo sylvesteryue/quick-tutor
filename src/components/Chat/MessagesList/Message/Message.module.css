@@ -1,0 +1,48 @@
+:root {
+    --main-color: #5ea3d0;
+    --secondary-color: white;
+    --main-text-color: #3e5869;
+    --secondary-text-color: #b0c7d6;
+    --send-message-form: #F5F5F5;
+}
+
+.MessageBox {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.MessageBox .BubbleContainer {
+    display: flex;
+}
+
+.MessageBox.CurrentUser .BubbleContainer {
+    justify-content: flex-end;
+}
+
+.Bubble {
+    margin: 15px 0;
+    max-width: 75%;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+/* .MessageBox .UserName {
+    font-size: 11px;
+    color: #3e5869;
+    opacity: 0.9;
+    margin-bottom: 6px;
+} */
+
+.MessageBox.CurrentUser .BubbleContainer .Bubble {
+    justify-content: flex-end;
+    background: #5ea3d0;
+    color: white;
+    max-width: 75%;
+}
+
+.MessageBox .BubbleContainer .Bubble{
+    justify-content: flex-start;
+    background: #F3F3F3;
+    color: black;
+}

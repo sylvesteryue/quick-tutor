@@ -1,0 +1,54 @@
+.SendMessageForm {
+    /* background: #F5F5F5;
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px; */
+    /* height: 60px; */
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-top: 1px solid #eeeef1;
+    position: fixed;
+    width: calc(100% - 20px);
+    bottom: 0px;
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    .SendMessageForm {
+      border: none;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+}
+
+.SendMessageForm .textarea {
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    margin: 0;
+    background: #F5F5F5;
+    font-weight: 200;
+
+    
+}
+
+.SendMessageForm input {
+    /* width: 100%;
+    padding: 15px 10px;
+    border: none;
+    margin: 0;
+    background: #F5F5F5;
+    font-weight: 200; */
+
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    height: 40px;
+    background: none;
+}
