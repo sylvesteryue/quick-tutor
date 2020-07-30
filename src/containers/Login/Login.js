@@ -23,6 +23,7 @@ class Login extends Component {
 
         try {
             await login(this.state.email, this.state.password);
+            this.props.history.push('/home')
         } catch (error) {
             console.log(error.message);
         }

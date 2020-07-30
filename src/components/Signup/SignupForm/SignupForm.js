@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
 class SignupForm extends Component {
 
     constructor(props) {
@@ -46,21 +49,21 @@ class SignupForm extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <h1>Sign up for Quick Tutor</h1>
                     <div>
-                        <input placeholder="Email" type="email" onChange={this.handleChange} value={this.state.email} name="email"></input>
+                        <TextField label="Email" type="email" onChange={this.handleChange} value={this.state.email} name="email"></TextField>
                     </div>
                     <div>
-                        <input placeholder="Password" type="password" onChange={this.handleChange} value={this.state.password} name="password"></input>
+                        <TextField label="Password" type="password" onChange={this.handleChange} value={this.state.password} name="password"></TextField>
                     </div>
 
                     <div>
-                        <input placeholder="Confirm Password" type="password" onChange={this.handleChange} value={this.state.cpassword} name="cpassword"></input>
+                        <TextField label="Confirm Password" type="password" onChange={this.handleChange} value={this.state.cpassword} name="cpassword"></TextField>
                     </div>
 
                     <div>
                         {this.state.error? (
                             <p>{this.state.error}</p>
                         ) : null}
-                        <button type="submit">Sign Up</button>
+                        <Button variant="contained" color="primary" type="submit">Log in</Button>
                     </div> 
                 </form>
             </div>

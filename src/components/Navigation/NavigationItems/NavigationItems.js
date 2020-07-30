@@ -10,18 +10,21 @@ const navigationItems = (props) => {
 
     if(!props.authenticated) {
         routes = [
+            {link: "/", name: "Home"},
             {link: "/login", name: "Login"},
             {link: "/signup", name: "Sign Up"}
         ]
     } else {
         routes = [
+            {link: "/home", name: "Home"},
             {link: "/request", name: "Request"},
-            {link: "/chat", name: "Chat"}
+            {link: "/chat", name: "Chat"},
+            {link: "/logout", name: "Logout"}
         ]
     }
     return(
         <ul className={classes.NavigationItems}>
-            <NavigationItem link="/">Home</NavigationItem>
+            {/* <NavigationItem link="/">Home</NavigationItem> */}
             {routes.map((routeData, index) => {
                 return <NavigationItem key={index} link={routeData.link}>{routeData.name}</NavigationItem>
             })}

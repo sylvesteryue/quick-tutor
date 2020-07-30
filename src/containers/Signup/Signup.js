@@ -12,15 +12,16 @@ class Signup extends Component {
             email: "",
             password: ""
         };
-        this.enterEmailPasswordHandler = this.enterEmailPasswordHandler.bind(this);
+        this.signupHandler = this.signupHandler.bind(this);
     }
 
-    async enterEmailPasswordHandler(signupEmail, signupPasswd) {
+    async signupHandler(signupEmail, signupPasswd) {
         await this.setState({ email: signupEmail, password: signupPasswd });
         console.log(this.state.email);
         console.log(this.state.password);
         try{
             await signup(this.state.email, this.state.password);
+            this.props.history.push('/home')
         } catch (error) {
             console.log(error.message);
         }
@@ -30,7 +31,7 @@ class Signup extends Component {
     render() {
         return(
             <div>
-                <SignupForm enterEmailPassword={this.enterEmailPasswordHandler}/>
+                <SignupForm enterEmailPassword={this.signupHandler}/>
             </div>
         );
     }

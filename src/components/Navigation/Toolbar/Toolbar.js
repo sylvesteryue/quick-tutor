@@ -8,10 +8,10 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 const toolbar = (props) => (
     <header className={classes.Toolbar}>
         <nav>
-            <NavigationItems autheticated={props.autheticated}/>
+            <NavigationItems authenticated={props.authenticated}/>
         </nav>
     </header>
 );
-
+ 
 
 export default toolbar;
