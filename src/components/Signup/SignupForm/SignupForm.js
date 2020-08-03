@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Container from '@material-ui/core/Container';s
 
 class SignupForm extends Component {
 
@@ -45,28 +46,28 @@ class SignupForm extends Component {
 
     render() {
         return(
-            <div>
+            <Container>
                 <form onSubmit={this.handleSubmit}>
                     <h1>Sign up for Quick Tutor</h1>
                     <div>
-                        <TextField label="Email" type="email" onChange={this.handleChange} value={this.state.email} name="email"></TextField>
+                        <TextField id="standard-basic" label="Email" type="email" onChange={this.handleChange} value={this.state.email} name="email"></TextField>
                     </div>
                     <div>
-                        <TextField label="Password" type="password" onChange={this.handleChange} value={this.state.password} name="password"></TextField>
+                        <TextField id="standard-basic" label="Password" type="password" onChange={this.handleChange} value={this.state.password} name="password"></TextField>
                     </div>
 
                     <div>
-                        <TextField label="Confirm Password" type="password" onChange={this.handleChange} value={this.state.cpassword} name="cpassword"></TextField>
+                        <TextField id="standard-basic" label="Confirm Password" type="password" onChange={this.handleChange} value={this.state.cpassword} name="cpassword"></TextField>
                     </div>
 
                     <div>
                         {this.state.error? (
                             <p>{this.state.error}</p>
                         ) : null}
-                        <Button variant="contained" color="primary" type="submit">Log in</Button>
+                        <Button variant="contained" color="primary" type="submit">Sign in</Button>
                     </div> 
                 </form>
-            </div>
+            </Container>
         );
     }
 

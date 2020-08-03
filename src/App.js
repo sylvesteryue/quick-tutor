@@ -17,6 +17,7 @@ import TutorChat from './containers/Chat/TutorChat';
 import Signup from './containers/Signup/Signup';
 import Login from './containers/Login/Login';
 import Request from './containers/Request/Request'
+import setAuthToken from './helpers/setAuthToken';
 
 class App extends Component {
 
@@ -25,18 +26,22 @@ class App extends Component {
   };
 
   componentDidMount() {
-    auth().onAuthStateChanged((user) => {
-      if(user) {
-        this.setState({
-          authenticated: true
-        });
-        console.log(this.state.authenticated);
-      } else {
-        this.setState({
-          authenticated: false
-        });
-      }
-    })
+    // auth().onAuthStateChanged((user) => {
+    //   if(user) {
+    //     this.setState({
+    //       authenticated: true
+    //     });
+    //     console.log(this.state.authenticated);
+    //   } else {
+    //     this.setState({
+    //       authenticated: false
+    //     });
+    //   }
+    // })
+    if(localStorage.jwtToken) {
+      const token = localStorage.jwtToken;
+      setAuthToken(token);
+    }
   }
 
   render(){

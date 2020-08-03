@@ -26,3 +26,5 @@ yarn-debug.log*
 yarn-error.log*
 
 firebase-body.html
+/backend/handlers/LoginHandler.js
+/backend/handlers/SignupHandler.js
